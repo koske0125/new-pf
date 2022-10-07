@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_07_010608) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_07_021450) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -33,9 +33,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_07_010608) do
     t.string "encrypted_password", default: "", null: false
     t.string "name", default: "", null: false
     t.string "summoner_name", default: "", null: false
-    t.integer "is_published", null: false
-    t.boolean "authenticate", null: false
-    t.boolean "is_deleted", null: false
+    t.integer "is_published", default: 0, null: false
+    t.boolean "authenticate", default: false, null: false
+    t.boolean "is_deleted", default: false, null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
